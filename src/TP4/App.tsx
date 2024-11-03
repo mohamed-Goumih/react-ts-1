@@ -12,11 +12,13 @@ const App: React.FC = () => {
     <Router>
       <Layout />
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/taches" element={<TaskList />} />
         <Route path="/ajoutertache" element={<Form />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NoPage />} />
+
       </Routes>
     </Router>
   );
