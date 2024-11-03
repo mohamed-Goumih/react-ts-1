@@ -6,10 +6,25 @@ const Counter: React.FC = () => {
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
+
+    const interval = setInterval(
+      () => {
+      setCount(prev=>prev+1);
+     
+    }, 1000);
     document.title = `Compteur : ${count}`;
     console.log(`Compteur : ${count}`);
-    
+
+    return () => clearInterval(interval);
+
   }, [count]);
+
+  // useEffect(() => {
+
+  //   document.title = `Compteur : ${count}`;
+  //   console.log(`Compteur : ${count}`);
+    
+  // }, [count]);
 
   return (
     <div>

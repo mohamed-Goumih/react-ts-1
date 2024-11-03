@@ -1,4 +1,3 @@
-import React from 'react';
 
 const TextInput: React.FC = () => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
