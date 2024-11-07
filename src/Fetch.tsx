@@ -27,9 +27,6 @@ const Fetch = () => {
         setCompletedTasks(completedCount);
     }, [tasks]);
     
-
-    
-    
    useEffect(
     (()=>{
     fetch('https://jsonplaceholder.typicode.com/todos')
